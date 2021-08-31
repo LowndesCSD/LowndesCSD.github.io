@@ -355,10 +355,12 @@
 					type: 'HEAD',
 					error: function() 
 					{
+						console.log(url.status)
 						return false;
 					},
 					success: function() 
 					{
+						console.log(url.status)
 						return true;
 					}
 				});
