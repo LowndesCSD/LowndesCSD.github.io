@@ -368,7 +368,6 @@
 			var url = document.getElementById("Augbfmenu").href;
 			if (url != "") 
 			{
-				console.log(url)
 				$.ajax({
 					url: url,
 					type: 'HEAD',
@@ -447,7 +446,7 @@
 		if (checkUrl(document.getElementById("Dec68menu").href)) {var Dec68url = "menu/6_8 December Lunch.htm"; var Dec68val = "6-8 Lunch";} else {var Dec68url = "NoFile"; var Dec68val = "File Not Found";}
 		if (checkUrl(document.getElementById("Dec912menu").href)) {var Dec912url = "menu/9_12 December Lunch.htm"; var Dec912val = "9-12 Lunch";} else {var Dec912url = "NoFile"; var Dec912val = "File Not Found";}
 		
-
+*/
 
 
 		document.getElementById("Janbfmenu").href = Janbfurl;
@@ -557,7 +556,7 @@
 		document.getElementById("Dec68menu").innerHTML = Dec68val;
 		document.getElementById("Dec912menu").href = Dec912url;
 		document.getElementById("Dec912menu").innerHTML = Dec912val;
-*/
+
 
 	</script>
 </html>
