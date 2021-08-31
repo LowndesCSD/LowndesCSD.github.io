@@ -343,7 +343,7 @@
 	</script> 
 	<script type="text/javascript">
 
-
+/*
 		function checkUrl(url) {
 			var request = false;
 			if (window.XMLHttpRequest) {
@@ -360,10 +360,34 @@
 
 			return false;
 		}
+*/
 
 
+		$(document).ready(function()
+		{
+			var url = document.getElementById("Augbfmenu").href;
+			if (url != "") 
+			{
+				console.log(url)
+				$.ajax({
+					url: url,
+					type: 'HEAD',
+					error: function() 
+					{
+						var Janbfurl = "Ajax Broken URL"; 
+						var Janbfval = "Ajax Broken";
+					},
+					success: function() 
+					{
+						var Janbfurl = "AjaxURL"; 
+						var Janbfval = "Ajax is Working";
+					}
+				});
+			};
+		});
 
-		if (checkUrl(document.getElementById("Janbfmenu").href)) {var Janbfurl = "menu/k_12 January Breakfast.htm"; var Janbfval = "Breakfast";} else {var Janbfurl = "NoFile"; var Janbfval = "File Not Found";}
+
+/*		if (checkUrl(document.getElementById("Janbfmenu").href)) {var Janbfurl = "menu/k_12 January Breakfast.htm"; var Janbfval = "Breakfast";} else {var Janbfurl = "NoFile"; var Janbfval = "File Not Found";}
 		if (checkUrl(document.getElementById("Jank5menu").href)) {var Jank5url = "menu/k_5 January Lunch.htm"; var Jank5val = "K-5 Lunch";} else {var Jank5url = "NoFile"; var Jank5val = "File Not Found";}
 		if (checkUrl(document.getElementById("Jan68menu").href)) {var Jan68url = "menu/6_8 January Lunch.htm"; var Jan68val = "6-8 Lunch";} else {var Jan68url = "NoFile"; var Jan68val = "File Not Found";}
 		if (checkUrl(document.getElementById("Jan912menu").href)) {var Jan912url = "menu/9_12 January Lunch.htm"; var Jan912val = "9-12 Lunch";} else {var Jan912url = "NoFile"; var Jan912val = "File Not Found";}
@@ -533,7 +557,7 @@
 		document.getElementById("Dec68menu").innerHTML = Dec68val;
 		document.getElementById("Dec912menu").href = Dec912url;
 		document.getElementById("Dec912menu").innerHTML = Dec912val;
-		
+*/
 
 	</script>
 </html>
