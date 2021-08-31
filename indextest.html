@@ -368,11 +368,13 @@
 			var url = document.getElementById("Augbfmenu").href;
 			if (url != "") 
 			{
+				console.log(url)
 				$.ajax({
 					url: url,
 					type: 'HEAD',
 					error: function() 
 					{
+						console.log(url)
 						var Augbfurl = "Ajax Broken URL"; 
 						var Augbfval = "Ajax Broken";
 					},
