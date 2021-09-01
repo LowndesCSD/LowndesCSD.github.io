@@ -349,9 +349,9 @@
 
 		function checkUrl(url)
 		{
-			response = if (url != "") 
+			if (url != "") 
 			{
-				$.ajax({
+				response = $.ajax({
 					url: url,
 					type: 'HEAD',
 					error: function(jqXHR, textStatus, errorThrown) 
@@ -366,6 +366,7 @@
 					}
 				})
 			}
+			
 			console.log("This is response: " + response);
 			return response;
 		}
