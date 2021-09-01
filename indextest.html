@@ -346,7 +346,6 @@
 		var Augbfurl = "Initializing"; 
 		var Augbfval = "Initializing";
 		var response;
-		var result;
 		
 		function checkUrl(url)
 		{
@@ -357,13 +356,15 @@
 					type: 'HEAD',
 					error: function(jqXHR, textStatus, errorThrown) 
 					{
+						response = jqXHR.status;
 						console.log("This failed " + jqXHR.status + ": " + url);
-						return jqXHR.status;
+						return response;
 					},
 					success: function(data, textStatus, jqXHR) 
 					{
+						response = jqXHR.status;
 						console.log("This succeeded " + jqXHR.status + ": " + url);
-						return jqXHR.status;
+						return response;
 					}
 				});
 			}
