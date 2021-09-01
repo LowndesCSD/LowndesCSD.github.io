@@ -391,6 +391,8 @@
 						console.log("This failed " + jqXHR.status + ": " + idlink);
 						menuLinkUrl = "MissingFile";
 						menuLinkVal = "File Is Missing";
+						document.getElementById(ident).href = menuLinkUrl;
+						document.getElementById(ident).innerHTML = menuLinkVal;
 					},
 					success: function(data, textStatus, jqXHR) 
 					{
@@ -401,19 +403,11 @@
 		}
 		
 		
-		checkUrl(Augbfmenu)
-		document.getElementById("Augbfmenu").href = menuLinkUrl;
-		document.getElementById("Augbfmenu").innerHTML = menuLinkVal;
-		checkUrl(Augk5menu)
-		document.getElementById("Augk5menu").href = menuLinkUrl;
-		document.getElementById("Augk5menu").innerHTML = menuLinkVal;
-		checkUrl(Aug68menu)
-		document.getElementById("Aug68menu").href = menuLinkUrl;
-		document.getElementById("Aug68menu").innerHTML = menuLinkVal;
-		checkUrl(Aug912menu)
-		document.getElementById("Aug912menu").href = menuLinkUrl;
-		document.getElementById("Aug912menu").innerHTML = menuLinkVal;
-		
+		checkUrl(Augbfmenu);
+		checkUrl(Augk5menu);
+		checkUrl(Aug68menu);
+		checkUrl(Aug912menu);
+
 /*		
 	
 		if (checkUrl(document.getElementById("Janbfmenu").href)) {var Janbfurl = "menu/k_12 January Breakfast.htm"; var Janbfval = "Breakfast";} else {var Janbfurl = "NoFile"; var Janbfval = "File Not Found";}
