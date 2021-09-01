@@ -346,6 +346,7 @@
 		var Augbfurl = "Initializing"; 
 		var Augbfval = "Initializing";
 		var response;
+		var result;
 		
 		function checkUrl(url)
 		{
@@ -370,7 +371,9 @@
 			}
 			
 			console.log("This is response: " + response);
-			return response;
+			result = response.status
+			console.log("This is response: " + response);
+			return result;
 		}
 
 
