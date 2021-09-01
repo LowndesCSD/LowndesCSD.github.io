@@ -354,20 +354,20 @@
 				response = $.ajax({
 					url: url,
 					type: 'HEAD',
-					error: function() 
+					error: function(jqXHR, textStatus, errorThrown) 
 					{
-						//console.log(url);
+						console.log(jqXHR.status + ": " + url);
 						return false;
 					},
-					success: function() 
+					success: function(data, textStatus, jqXHR) 
 					{
-						//console.log(url);
+						console.log(jqXHR.status + ": " + url);
 						return true;
 					}
 				})
 			}
-			console.log(response);
-			return response;
+			console.log(response.status);
+			return response.;
 		}
 
 
