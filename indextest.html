@@ -352,7 +352,7 @@
 		{
 			if (url != "") 
 			{
-				response = $.ajax({
+				$.ajax({
 					url: url,
 					type: 'HEAD',
 					error: function(jqXHR, textStatus, errorThrown) 
@@ -370,7 +370,7 @@
 				});
 			}
 			
-			//console.log("This is response: " + response);
+			console.log("This is response: " + response);
 			//console.table( response )
 			//JSON.stringify(response, null, "  ");
 			console.log(JSON.stringify(response))
