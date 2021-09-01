@@ -352,7 +352,7 @@
 		{
 			if (url != "") 
 			{
-				response = $.ajax({
+				$.ajax({
 					url: url,
 					type: 'HEAD',
 					error: function(jqXHR, textStatus, errorThrown) 
@@ -365,9 +365,10 @@
 						console.log("This succeeded " + jqXHR.status + ": " + url);
 						return jqXHR.status;
 					}
-				}).status;
+				})
 			}
 			
+			response = jqXHR.status
 			console.log("This is response: " + response);
 			return response;
 		}
