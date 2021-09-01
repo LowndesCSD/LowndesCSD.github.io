@@ -356,17 +356,15 @@
 					type: 'HEAD',
 					error: function() 
 					{
-						//return false;
 						console.log(url);
-						console.log(response);
+						return false;
 					},
 					success: function() 
 					{
-						//return true;
 						console.log(url);
-						console.log(response);
+						return true;
 					}
-				}).status;
+				})
 			}
 			console.log(response);
 			return response;
