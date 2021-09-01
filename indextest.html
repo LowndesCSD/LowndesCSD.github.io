@@ -345,11 +345,11 @@
 	
 		var Augbfurl = "Initializing"; 
 		var Augbfval = "Initializing";
-		var response = false;
+		var response;
 
 		function checkUrl(url)
 		{
-			if (url != "") 
+			response = if (url != "") 
 			{
 				$.ajax({
 					url: url,
@@ -357,12 +357,12 @@
 					error: function(jqXHR, textStatus, errorThrown) 
 					{
 						console.log("This failed " + jqXHR.status + ": " + url);
-						response = false;
+						return jqXHR.status;
 					},
 					success: function(data, textStatus, jqXHR) 
 					{
 						console.log("This succeeded " + jqXHR.status + ": " + url);
-						response = true;
+						return jqXHR.status;
 					}
 				})
 			}
