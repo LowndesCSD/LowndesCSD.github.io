@@ -356,17 +356,17 @@
 					type: 'HEAD',
 					error: function(jqXHR, textStatus, errorThrown) 
 					{
-						console.log(jqXHR.status + ": " + url);
+						console.log("This failed " + jqXHR.status + ": " + url);
 						return false;
 					},
 					success: function(data, textStatus, jqXHR) 
 					{
-						console.log(jqXHR.status + ": " + url);
+						console.log("This succeeded " + jqXHR.status + ": " + url);
 						return true;
 					}
 				})
 			}
-			//console.log(response.status);
+			console.log("This is response: " + response);
 			return response;
 		}
 
