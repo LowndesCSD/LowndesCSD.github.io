@@ -346,7 +346,8 @@
 		var Augbfurl = "Initializing"; 
 		var Augbfval = "Initializing";
 		var response;
-
+		var result;
+		
 		function checkUrl(url)
 		{
 			if (url != "") 
@@ -364,11 +365,11 @@
 						console.log("This succeeded " + jqXHR.status + ": " + url);
 						return jqXHR.status;
 					}
-				})
+				}).status;
 			}
 			
-			console.log("This is response.status: " + response.status);
-			return response.status;
+			console.log("This is response: " + response);
+			return response;
 		}
 
 
